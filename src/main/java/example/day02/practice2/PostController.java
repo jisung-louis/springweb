@@ -1,5 +1,6 @@
 package example.day02.practice2;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -10,6 +11,19 @@ import java.util.Map;
 @RestController
 @RequestMapping("/practice2")
 public class PostController {
+
+    /*
+        메소드 이란? 상호작용(주고받는 쌍방향 행동)
+            매개변수? ㅁ개(중개)변수(정해져있지않은값) : 메소드가 호출될 때 들어오는 값(인수)
+            반환값? 메소드가 종료될 때 호출했던 곳으로 반환해주는 값 (리턴)
+        HTTP 이란? 상호작용( request / response )
+            request? 클라이언트가 서버로부터 요청
+            response? 서버가 처리한 결과를 클라이언트에 반환/응답
+    */
+
+    @Autowired
+    private BoardController boardController;
+
     @PostMapping("/post")
     public boolean doPost(){
         return true;

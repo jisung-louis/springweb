@@ -20,9 +20,10 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-    runtimeOnly 'com.mysql:mysql-connector-j'
-    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'// Springboot Web
+    runtimeOnly 'com.mysql:mysql-connector-j' // MySQL
+    compileOnly 'org.projectlombok:lombok' // Lombok
+    annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
