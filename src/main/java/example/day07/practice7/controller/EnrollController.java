@@ -23,4 +23,9 @@ public class EnrollController {
     public List<EnrollResponseDto> getEnrolls(){
         return enrollService.getEnrolls();
     }
+
+    @GetMapping("/detail")
+    public EnrollResponseDto getEnroll(@RequestParam Long enrollId){
+        return enrollService.getEnroll(enrollId);
+    }
 }

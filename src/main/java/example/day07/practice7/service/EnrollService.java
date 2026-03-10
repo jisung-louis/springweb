@@ -51,4 +51,13 @@ public class EnrollService {
         });
         return list;
     }
+
+    public EnrollResponseDto getEnroll(Long enrollId){
+        Optional<EnrollEntity> optional = enrollRepository.findById(enrollId);
+        if(optional.isPresent()){
+            EnrollEntity enroll = optional.get();
+            return enroll.toDto();
+        }
+        return null;
+    }
 }
