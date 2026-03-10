@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> 게시물 상세 </h3>
+    <a href="/종합예제10/index.html"> 게시글 목록으로 </a>
+    <br/><br/>
+    <div id="boardBox">
+        제목 : <div> 제목이 들어갈 자리 </div>
+        작성자/작성일 : <div> 작성자가 들어갈 자리 / 작성일이 들어갈 자리 </div>
+        내용 : <div> 내용이 들어갈 자리 </div>
+        <button onclick="updatePost()"> 수정 </button>
+        <button onclick="deletePost()"> 삭제 </button>
+    </div>
+    <br/>
+    <br/>
+    <div>
+        <div style="border:1px solid black; border-radius: 8px; padding:10px;">
+            <b> 댓글 작성 </b>
+            <br/><br/>
+            댓글 내용 : <input id="ccontentInput"><br/>
+            작성자명 : <input id="cwriterInput">
+            <button onclick="addComment()"> 등록 </button>
+        </div>
+        <br/>
+        <div style="border:1px solid black; border-radius: 8px; padding:10px;">
+        <b> 댓글 목록 </b>
+            <br/>
+            <div id="commentBox" style="padding-bottom: 10px;">
+                <div style="padding-bottom: 10px;">
+                    <div> (댓글 내용) </div>
+                    <div> (작성자1) / 2020-01-01 </div>
+                    <button onclick="updateComment()"> 수정 </button>
+                    <button onclick="deleteComment()"> 삭제 </button>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/종합예제10/detail.js"></script>
+</body>
+</html>
